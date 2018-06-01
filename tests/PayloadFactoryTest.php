@@ -30,13 +30,13 @@ class PayloadFactoryTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_return_a_payload_when_passing_an_array_of_claims_to_make_method()
     {
-        $expTime = 123 + 3600;
+        $expTime = intval(\microtime(true)*1000) + 60;
     
         $payload = $this->factory->make(['passport_id' => 1, 'jti' => 'foo', 'iat' => 123]);
 
         $this->assertEquals($payload->get('passport_id'), 1);
         $this->assertEquals($payload->get('iat'), 123);
-        $this->assertEquals($payload['exp'], 12312313);
+        $this->assertEquals($payload['exp'],  $expTime);
 
         $this->assertInstanceOf('Meicai\JWTPassport\Payload', $payload);
     }
@@ -47,7 +47,7 @@ class PayloadFactoryTest extends \PHPUnit_Framework_TestCase
         $payload = $this->factory->make([1 => 'claim one']);
 
         $this->assertEquals('claim one', $payload->get(1));
-        $this->assertEquals(123, $payload->get('iat'));
+        $this->assertEquals(intval(\microtime(true)*1000), $payload->get('iat'));
     }
 
     /** @test */
