@@ -8,7 +8,6 @@
 namespace Meicai\JWTPassport;
 
 use Meicai\JWTPassport\Claims\Factory;
-use Meicai\JWTPassport\Validators\PayloadValidator;
 use Ramsey\Uuid\Uuid;
 
 class PayloadFactory
@@ -42,10 +41,9 @@ class PayloadFactory
      * @param Factory  $claimFactory
      * @param PayloadValidator  $validator
      */
-    public function __construct(Factory $claimFactory, PayloadValidator $validator)
+    public function __construct(Factory $claimFactory)
     {
         $this->claimFactory = $claimFactory;
-        $this->validator = $validator;
     }
 
     /**

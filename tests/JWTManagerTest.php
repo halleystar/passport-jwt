@@ -46,7 +46,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
 
         $token = $this->manager->encode($payload);
 
-        $this->assertEquals($token, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9leGFtcGxlLmNvbSIsImV4cCI6MzcyMywibmJmIjoxMjMsImlhdCI6MTIzLCJqdGkiOiJmb28ifQ.4X3SgCGGVpXaUFVqPyXwRGkzt3PzwSEdZsh6BOLU3_M');
+        $this->assertEquals($token, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzcG9ydF9pZCI6MSwiaXNzIjoicGFzc3BvcnQtYXBpIiwiZXhwIjozNzIzLCJpYXQiOjEyMywianRpIjoiand0X2lkIn0._foH6gnggyJcAMs9Js0oHExUNAWuQiBb0-kCWbzRC20');
         
         return $token;
     }
@@ -69,25 +69,15 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($decodeClaims, $claims);
     }
 
-    /** @test */
-    public function should_refresh_token()
+    /** 
+     *  @test 
+     *  @depends should_encode_payload
+    */
+    public function should_refresh_token($token)
     {
 
         $token = $this->manager->refresh($token);
 
         $this->assertInstanceOf('Meicai\JWTPassport\Token', $token);
-    }
-
-    /** @test */
-    public function should_invalidate_token()
-    {
-        $claims = [
-            new PassportId(1),
-            new Issuer('passport-api'),
-            new Expiration(123 + 3600),
-            new IssuedAt(123),
-            new JwtId('jwt_id'),
-        ];
-        $this->manager->invalidate($token);
     }
 }

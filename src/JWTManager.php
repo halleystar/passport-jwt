@@ -9,7 +9,7 @@
 namespace Meicai\JWTPassport;
 
 use Meicai\JWTPassport\Exceptions\JWTException;
-use Meicai\JWTPassport\Providers\JWT\NamshiProvider;
+use Meicai\JWTPassport\Providers\NamshiProvider;
 use Meicai\JWTPassport\Claims\Factory;
 
 class JWTManager

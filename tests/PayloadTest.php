@@ -65,7 +65,7 @@ class PayloadTest extends \PHPUnit_Framework_TestCase
     public function it_should_allow_array_access_on_the_payload()
     {
         $this->assertTrue(isset($this->payload['iat']));
-        $this->assertEquals($this->payload['sub'], 1);
+        $this->assertEquals($this->payload['passport_id'], 1);
         $this->assertArrayHasKey('exp', $this->payload);
     }
 
@@ -73,18 +73,18 @@ class PayloadTest extends \PHPUnit_Framework_TestCase
     public function it_should_get_properties_of_payload_via_get_method()
     {
         $this->assertInternalType('array', $this->payload->get());
-        $this->assertEquals($this->payload->get('sub'), 1);
+        $this->assertEquals($this->payload->get('passport_id'), 1);
     }
 
     /** @test */
     public function it_should_get_multiple_properties_when_passing_an_array_to_the_get_method()
     {
-        $values = $this->payload->get(['sub', 'jti']);
+        $values = $this->payload->get(['passport_id', 'jti']);
 
-        list($sub, $jti) = $values;
+        list($passport_id, $jti) = $values;
 
         $this->assertInternalType('array', $values);
-        $this->assertEquals($sub, 1);
+        $this->assertEquals($passport_id, 1);
         $this->assertEquals($jti, 'foo');
     }
 
@@ -117,8 +117,7 @@ class PayloadTest extends \PHPUnit_Framework_TestCase
     public function it_should_get_the_claims()
     {
         $claims = $this->payload->getClaims();
-
         $this->assertInstanceOf('Meicai\JWTPassport\Claims\Expiration', $claims[2]);
-        $this->assertInstanceOf('Meicai\JWTPassport\Claims\JwtId', $claims[5]);
+        $this->assertInstanceOf('Meicai\JWTPassport\Claims\JwtId', $claims[4]);
     }
 }
