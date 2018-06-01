@@ -62,7 +62,7 @@ class PayloadFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    public function it_should_return_a_payload_when_passing_miltidimensional_claims()
+    public function should_return_a_payload_when_passing_claims()
     {
         $payload = $this->factory->passport_id(1)->foo(['bar' => [0, 0, 0]])->make();
 

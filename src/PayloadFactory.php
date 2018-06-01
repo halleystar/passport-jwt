@@ -18,11 +18,6 @@ class PayloadFactory
     protected $claimFactory;
 
     /**
-     * @var PayloadValidator
-     */
-    protected $validator;
-
-    /**
      * @var int unit second
      */
     protected $ttl = 60;
@@ -39,7 +34,6 @@ class PayloadFactory
 
     /**
      * @param Factory  $claimFactory
-     * @param PayloadValidator  $validator
      */
     public function __construct(Factory $claimFactory)
     {
@@ -56,7 +50,7 @@ class PayloadFactory
     {
         $claims = $this->buildClaims($customClaims)->resolveClaims();
 
-        return new Payload($claims, $this->validator);
+        return new Payload($claims);
     }
 
     /**

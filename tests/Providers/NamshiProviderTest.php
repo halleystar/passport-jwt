@@ -21,7 +21,7 @@ class NamshiProviderTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_return_the_token_when_passing_a_valid_passport_id_to_encode()
     {
-        $payload = ['passport_id' => 1, 'exp' => 123, 'iat' => 123, 'iss' => '/foo'];
+        $payload = ['passport_id' => 1, 'exp' => 123, 'iat' => 123, 'iss' => 'passport-api'];
 
 
         $token = $this->provider->encode($payload);
@@ -32,7 +32,7 @@ class NamshiProviderTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_throw_an_invalid_exception_when_the_payload_could_not_be_encoded()
     {
-
+        //TODO
     }
 
     /** @test */
