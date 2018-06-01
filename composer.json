@@ -1,0 +1,35 @@
+{
+    "name": "meicai/passport-jwt",
+    "description": "JSON Web Token of passport",
+    "keywords": [
+        "jwt",
+        "meicai",
+        "json web token"
+    ],
+    "authors": [
+        {
+            "name": "maqiang01",
+            "email": "maqiang01@meicai.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "ramsey/uuid": "^3.0",
+        "php": ">=7.0.0",
+        "namshi/jose": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0",
+        "mockery/mockery": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Meicai\\JWTPassport\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Meicai\\JWTPassport\\Test\\": "tests"
+        }
+    }
+}
