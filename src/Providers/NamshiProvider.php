@@ -12,7 +12,7 @@ use Namshi\JOSE\JWS;
 use Meicai\JWTPassport\Exceptions\JWTException;
 use Meicai\JWTPassport\Exceptions\TokenInvalidException;
 
-class NamshiAdapter extends JWTProvider
+class NamshiProvider extends JWTProvider
 {
     /**
      * @var \Namshi\JOSE\JWS

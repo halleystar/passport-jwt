@@ -3,14 +3,14 @@
 namespace Meicai\JWTPassport\Test\Providers;
 
 use Mockery;
-use Meicai\JWTPassport\Providers\NamshiAdapter;
+use Meicai\JWTPassport\Providers\NamshiProvider;
 
-class NamshiAdapterTest extends \PHPUnit_Framework_TestCase
+class NamshiProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
         $this->jws = Mockery::mock('Namshi\JOSE\JWS');
-        $this->provider = new NamshiAdapter('secret', 'HS256', $this->jws);
+        $this->provider = new NamshiProvider('secret', 'HS256', $this->jws);
     }
 
     public function tearDown()

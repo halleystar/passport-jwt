@@ -9,7 +9,7 @@
 namespace Meicai\JWTPassport;
 
 use Meicai\JWTPassport\Exceptions\JWTException;
-use Meicai\JWTPassport\Providers\JWT\NamshiAdapter;
+use Meicai\JWTPassport\Providers\JWT\NamshiProvider;
 use Meicai\JWTPassport\Claims\Factory;
 
 class JWTManager
@@ -27,7 +27,7 @@ class JWTManager
      */
     public function __construct(string $secret, string $algo)
     {
-        $this->jwt = new NamshiAdapter($secret, $algo);
+        $this->jwt = new NamshiProvider($secret, $algo);
         
         $this->payloadFactory = new PayloadFactory(new Factory());
     }
