@@ -5,7 +5,7 @@
  * @author maqiang01@meicai.cn
  *
  */
-namespace Meicai\JWTPassport\Exceptions;
+namespace SPRUCE\JWTPassport\Exceptions;
 
 class JWTException extends \Exception
 {

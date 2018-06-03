@@ -9,12 +9,12 @@
 namespace Meicai\JWTPassport\Test;
 
 use Mockery;
-use Meicai\JWTPassport\Payload;
-use Meicai\JWTPassport\Claims\JwtId;
-use Meicai\JWTPassport\Claims\Issuer;
-use Meicai\JWTPassport\Claims\PassportId;
-use Meicai\JWTPassport\Claims\IssuedAt;
-use Meicai\JWTPassport\Claims\Expiration;
+use SPRUCE\JWTPassport\Payload;
+use SPRUCE\JWTPassport\Claims\JwtId;
+use SPRUCE\JWTPassport\Claims\Issuer;
+use SPRUCE\JWTPassport\Claims\PassportId;
+use SPRUCE\JWTPassport\Claims\IssuedAt;
+use SPRUCE\JWTPassport\Claims\Expiration;
 
 class PayloadTest extends \PHPUnit_Framework_TestCase
 {

@@ -6,7 +6,7 @@
  *
  */
 
-namespace Meicai\JWTPassport\Exceptions;
+namespace SPRUCE\JWTPassport\Exceptions;
 
 class TokenInvalidException extends JWTException
 {

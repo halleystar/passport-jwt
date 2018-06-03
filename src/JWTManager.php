@@ -6,11 +6,11 @@
  *
  */
 
-namespace Meicai\JWTPassport;
+namespace SPRUCE\JWTPassport;
 
-use Meicai\JWTPassport\Exceptions\JWTException;
-use Meicai\JWTPassport\Providers\NamshiProvider;
-use Meicai\JWTPassport\Claims\Factory;
+use SPRUCE\JWTPassport\Exceptions\JWTException;
+use SPRUCE\JWTPassport\Providers\NamshiProvider;
+use SPRUCE\JWTPassport\Claims\Factory;
 
 class JWTManager
 {

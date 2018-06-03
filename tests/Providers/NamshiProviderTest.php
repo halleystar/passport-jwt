@@ -1,9 +1,9 @@
 <?php
 
-namespace Meicai\JWTPassport\Test\Providers;
+namespace SPRUCE\JWTPassport\Test\Providers;
 
 use Mockery;
-use Meicai\JWTPassport\Providers\NamshiProvider;
+use SPRUCE\JWTPassport\Providers\NamshiProvider;
 
 class NamshiProviderTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,9 +1,10 @@
 {
-    "name": "meicai/passport-jwt",
+    "name": "spruce/passport-jwt",
     "description": "JSON Web Token of passport",
     "keywords": [
         "jwt",
-        "meicai",
+        "jwe",
+        "spruce",
         "json web token"
     ],
     "authors": [
@@ -24,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Meicai\\JWTPassport\\": "src"
+            "SPRUCE\\JWTPassport\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Meicai\\JWTPassport\\Test\\": "tests"
+            "SPRUCE\\JWTPassport\\Test\\": "tests"
         }
     }
 }

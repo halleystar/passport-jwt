@@ -8,7 +8,7 @@
 
 namespace Meicai\JWTPassport;
 
-use Meicai\JWTPassport\Validators\TokenValidator;
+use SPRUCE\JWTPassport\Validators\TokenValidator;
 
 class Token
 {

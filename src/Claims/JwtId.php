@@ -7,7 +7,7 @@
  *
  */
 
-namespace Meicai\JWTPassport\Claims;
+namespace SPRUCE\JWTPassport\Claims;
 
 class JwtId extends Claim
 {

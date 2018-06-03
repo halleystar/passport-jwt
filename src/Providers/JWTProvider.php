@@ -5,7 +5,7 @@
  * @author maqiang01@meicai.cn
  *
  */
-namespace Meicai\JWTPassport\Providers;
+namespace SPRUCE\JWTPassport\Providers;
 
 abstract class JWTProvider
 {

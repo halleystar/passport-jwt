@@ -5,12 +5,12 @@
  * @author maqiang01@meicai.cn
  *
  */
-namespace Meicai\JWTPassport\Providers;
+namespace SPRUCE\JWTPassport\Providers;
 
 use Exception;
-use Namshi\JOSE\JWS;
-use Meicai\JWTPassport\Exceptions\JWTException;
-use Meicai\JWTPassport\Exceptions\TokenInvalidException;
+use SPRUCE\JOSE\JWS;
+use SPRUCE\JWTPassport\Exceptions\JWTException;
+use SPRUCE\JWTPassport\Exceptions\TokenInvalidException;
 
 class NamshiProvider extends JWTProvider
 {

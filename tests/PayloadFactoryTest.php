@@ -5,13 +5,13 @@
  * @author maqiang01@meicai.cn
  *
  */
-namespace Meicai\JWTPassport\Test;
+namespace SPRUCE\JWTPassport\Test;
 
 use Mockery;
-use Meicai\JWTPassport\PayloadFactory;
+use SPRUCE\JWTPassport\PayloadFactory;
 
-use Meicai\JWTPassport\Claims\Factory;
-use Meicai\JWTPassport;
+use SPRUCE\JWTPassport\Claims\Factory;
+use SPRUCE\JWTPassport;
 
 class PayloadFactoryTest extends \PHPUnit_Framework_TestCase
 {

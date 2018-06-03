@@ -6,7 +6,7 @@
  *
  */
 
-namespace Meicai\JWTPassport\Validators;
+namespace SPRUCE\JWTPassport\Validators;
 
 interface ValidatorInterface
 {

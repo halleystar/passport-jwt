@@ -6,10 +6,10 @@
  *
  */
 
-namespace Meicai\JWTPassport;
+namespace SPRUCE\JWTPassport;
 
-use Meicai\JWTPassport\Claims\Claim;
-use Meicai\JWTPassport\Exceptions\PayloadException;
+use SPRUCE\JWTPassport\Claims\Claim;
+use SPRUCE\JWTPassport\Exceptions\PayloadException;
 
 class Payload implements \ArrayAccess
 {

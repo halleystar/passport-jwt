@@ -7,7 +7,7 @@
  */
 namespace Meicai\JWTPassport;
 
-use Meicai\JWTPassport\Claims\Factory;
+use SPRUCE\JWTPassport\Claims\Factory;
 use Ramsey\Uuid\Uuid;
 
 class PayloadFactory

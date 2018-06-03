@@ -6,7 +6,7 @@
  * @author maqiang01@meicai.cn
  *
  */
-namespace Meicai\JWTPassport\Claims;
+namespace SPRUCE\JWTPassport\Claims;
 
 interface ClaimInterface
 {

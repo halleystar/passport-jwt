@@ -6,9 +6,9 @@
  *
  */
 
-namespace Meicai\JWTPassport\Validators;
+namespace SPRUCE\JWTPassport\Validators;
 
-use Meicai\JWTPassport\Exceptions\TokenInvalidException;
+use SPRUCE\JWTPassport\Exceptions\TokenInvalidException;
 
 class TokenValidator implements ValidatorInterface
 {
